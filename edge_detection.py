@@ -40,7 +40,7 @@ if lines is not None:
         # if 20 <= x1 < 164 and 10 <= x2 < 170 and 20 <= y1 < 164 and 20 <= y2 < 164:
 
         print(line)
-        cv2.line(canny, (87, 87), (87, 87), (0, 255, 0), 2)
+        cv2.line(img1, (87, 87), (87, 87), (0, 255, 0), 2)
 
     cv2.imshow('view image 2', canny)
     cv2.waitKey(0)
@@ -51,7 +51,7 @@ if lines is not None:
 
     angle = np.arctan2(y2 - y1, x2 - x1) * 180 / np.pi
 
-    print(img1, angle)
+    print(img1, offset, angle)
 
 else:
     # If no lines are detected, assume the robot is at a junction
